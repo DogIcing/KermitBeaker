@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "KermtBeaker",
+  "version": "1.0",
+  "description": "Replace all images with Beaker or Kermit",
+
+  "action": {
+    "default_icon": "kermit.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "web_accessible_resources": [{ 
+  "resources": ["kermit.jpg"],
+  "matches": ["<all_urls>"]
+  },{ 
+  "resources": ["beaker.jpg"],
+  "matches": ["<all_urls>"]
+  }]
+}
